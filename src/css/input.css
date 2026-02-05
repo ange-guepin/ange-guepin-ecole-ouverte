@@ -1,0 +1,108 @@
+/* PicoCSS for base styles */
+@import "@picocss/pico/css/pico.min.css";
+
+/* Tailwind CSS */
+@import "tailwindcss";
+
+@source "../**/*.html";
+@source "../**/*.njk";
+@source "../**/*.md";
+
+@theme {
+  --font-family-sans: Helvetica, sans-serif;
+  --color-primary: #14847E;
+  --color-text: #333333;
+}
+
+/* Custom overrides */
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+nav {
+  border-bottom: 1px solid var(--color-text);
+}
+
+nav .logo {
+  margin: 0;
+  font-weight: bold;
+  font-size: medium;
+  text-decoration: none;
+  color: currentColor;
+}
+
+nav .logo:hover {
+  text-decoration: underline;
+}
+
+nav .night-mode-btn {
+  color: var(--color-text);
+  background-color: transparent;
+  border: none;
+  padding: var(--nav-link-spacing-vertical) var(--nav-link-spacing-horizontal);
+  width: auto;
+  margin-bottom: 0;
+}
+
+nav .night-mode-btn svg {
+  fill: var(--color-text);
+}
+
+.article-wrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-wrapper a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.article-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.article-wrapper img {
+  width: 100%;
+}
+
+.blog-single {
+  color: var(--color-text);
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.blog-single .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.blog-single p {
+  margin: 0;
+}
+
+.blog-single .description {
+  margin-top: 1rem;
+}
+
+.link-btn {
+  color: var(--color-text);
+  padding: 0.5rem;
+  font-size: small;
+  border: 1px solid;
+  display: inline-block;
+}
+
+blockquote {
+  border-left: 4px solid currentColor;
+  padding-left: 20px;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .article-wrapper {
+    width: 90%;
+  }
+}
