@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addWatchTarget("./src/sass/");
+  eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/js");
   eleventyConfig.addPassthroughCopy("./src/admin");
